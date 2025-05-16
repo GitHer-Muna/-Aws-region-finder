@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>AWS Regions</title></head>
+<body>
+  <h1>AWS Regions for {{ country }}</h1>
+  {% if regions %}
+    <ul>
+      {% for region in regions %}
+        <li>{{ region.name }} ({{ region.code }})</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No AWS region found for this country.</p>
+  {% endif %}
+  <a href="/">Try another</a>
+</body>
+</html>
